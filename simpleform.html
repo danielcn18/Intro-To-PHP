@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        p{
+            margin: 0;
+        }
+        body{
+            margin: 1rem 2rem;
+        }
+        *{
+            margin: 0.2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Form Calculation using PHP</h1>
+    <form action="calculation.php" method="post">
+        <p>Fill out this form to calculate the total cost</p>
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" required />
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required />
+        <br>    
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" required />
+        <br>
+        <label for="qty">Quantity</label>
+        <input type="text" id="qty" name="qty" required />
+        <br>
+        <label for="discount">Discount</label>
+        <select name="discount" id="discount" required>
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+        </select>
+        <br>
+        <label for="tax">Tax</label>
+        <input type="number" value="7.5" id="tax" name="tax" readonly />
+        <br>
+        <label for="shippingMethod">Shipping Method</label>
+        <select name="shippingMethod" id="shippingMethod" required>
+            <option value="5.00">Slow and Steady ($5.00)</option>
+            <option value="8.95">Put a move on it ($8.95)</option>
+            <option value="5.0">I need it yesterday! ($19.36)</option>
+        </select>
+        <br>
+        <!-- "Number of payments made (essentially a payment plan)," could be implemented -->
+        <input type="submit" name="submit" value="Calculate!" />
+    </form>
+</body>
+</html>
